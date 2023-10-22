@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "docesweb/wsgi.py",
+        "src": "doceria/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "docesweb/wsgi.py"
+        "dest": "doceria/wsgi.py"
       }
     ]
   }
