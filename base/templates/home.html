@@ -1,0 +1,173 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block title %} Tattoodubem {% endblock %}
+
+{% block meta %} <link rel="stylesheet" href="{% static 'css/slider.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div id="inicio" class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        
+
+            <div class="slide first">
+                <img src="{% static 'images/tattoo1.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/tattoo2.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/tattoo4.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/tattoo5.jpg' %}" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+        </div>
+        
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+    <div class="container-products mt-4">
+        
+            <h2>Tattoo's</h2>
+            <hr>
+      
+        <div class="products">
+            
+          <div class="list-prod mt-4">
+              <img width="650px" src="{% static 'images/tattoo6.jpg' %}" alt="">
+              <p></p>
+          </div>
+
+          <div class="list-prod mt-4">
+            <img width="640px" src="{% static 'images/tattoo7.jpg' %}" alt="">
+            <p></p>
+          </div>
+
+          <div class="list-prod mt-4">
+            <img width="640px" src="{% static 'images/tatto3.jpg' %}" alt="">
+            <p></p>
+          </div>
+
+          <div class="list-prod mt-4">
+            <img width="600px" src="{% static 'images/tattoo5.jpg' %}" alt="">
+            <p></p>
+          </div>
+          
+        </div>
+    </div>
+    
+    <div id="contato">
+      
+      <!-- ***** Contact Area Start ***** -->
+      {% if message_name %}
+        <center>
+          <h2>Obrigado {{ message_name }}!</h2>
+          <p>Nós rebemos seu email e vamos te responder em breve...</p>
+        </center>
+        <br/><br/><br/>
+      {% else %}
+    
+      <section class="dento-contact-area mt-50 mb-100">
+        <div class="container">
+    
+          <div class="row">
+            <!-- Contact Information -->
+            <div class="col-12 col-md-4" style="margin-left: -.7rem;">
+              <div class="contact-information">
+                <h5>Endereço</h5>
+                <p>Rua Senador Lourival Batista, Poço Redondo - SE</p>
+    
+                <h5>Telefone</h5>
+                <p>+55 79 999705541</p>
+    
+                
+    
+                <h5>Email</h5>
+                <p class="mb-0">hiagoprado57@gmail.com</p>
+              </div>
+            </div>
+    
+            <!-- Contact Form -->
+            <div class="col-12 col-md-8">
+              <div class="contact-form">
+                <!-- Section Heading -->
+                <div class="section-heading">
+                  <h2>Entre em Contato</h2>
+                  <div class="line"></div>
+                </div>
+                <!-- Form -->
+                <form action="" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <input type="text" name="message-name" class="form-control mb-30" placeholder="Seu Nome ">
+                    </div>
+                    <div class="col-lg-6">
+                      <input type="email" name="message-email" class="form-control mb-30" placeholder="Seu Email">
+                    </div>
+                    <div class="col-12">
+                      <textarea name="message" class="form-control mb-30" placeholder="Sua Mensagem"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn dento-btn">Enviar Mensagem</button>
+                    </div>
+                  </div>
+                </form>
+    
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="google-maps mb-100">
+                <iframe id="localizacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.4896999159835!2d-37.68497408021979!3d-9.804821551172868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70f391e81f47bb3%3A0xe9ff04384e6bb149!2sAg%C3%AAncia%20dos%20Correios%20-%20Po%C3%A7o%20Redondo!5e0!3m2!1spt-BR!2sbr!4v1697060862265!5m2!1spt-BR!2sbr"
+                  allowfullscreen></iframe>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      <footer class="footer-container" >
+            <div class="footer-info">
+                <p>CEP - 49810-000 - Sergipe - Poço Redondo
+                </p>
+                <p><img width="" src="{% static 'images/whats.png' %}" alt="">+55 79 999705541</p>
+                <a href="https://www.instagram.com/hiagotattoodubem_/"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+
+            </div>
+            <div class="maded"><p>feito por <a href="https://www.instagram.com/mirelli_cirilo/">CiriloDev</a></p></div>
+            
+      </footer>
+</div>
+    
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

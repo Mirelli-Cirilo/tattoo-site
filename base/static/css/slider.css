@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    margin-top: 103rem;
+    
+
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    gap: 25px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+    
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;  
+}
+
+.manual-btn:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-left: 10rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+    .slider{
+        margin: 0 auto;
+        width: 108%;
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        margin-left: -1rem;
+        margin-top: 177rem;
+    
+    }
+
+    .slides{
+        width: 400%;
+        height: 400px;
+        display: flex;
+        
+    }
+    .manual-btn{
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        transition: .2s;  
+    }
+    .manual-btn:hover{
+        background-color: rgb(190, 190, 190, .2);
+    }
+
+    
+.navigation-auto{
+    position: absolute;
+    width: 400px;
+    margin-top: 280px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-left: 0rem;
+}
+
+
+.manual-navigation{
+    position: absolute;
+    width: 400px;
+    gap: 25px;
+    margin-top: -120px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0rem;
+    
+}
+}
