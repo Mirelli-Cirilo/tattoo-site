@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 
     # Internal apps
     'base.apps.BaseConfig', 
-    'rest_framework',
+   
 
 
 ]
@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, '/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'base/static'),)
 
 
 

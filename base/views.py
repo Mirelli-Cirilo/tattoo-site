@@ -26,5 +26,5 @@ def home(request):
 		return render(request, 'home.html', {'message_name': message_name})
 
 	else:
-		return render(request, 'home.html', {})
+		return render(request, 'home.html')
 
